@@ -23,9 +23,9 @@ The study includes both **synthetic datasets** and a **real-world medical datase
 * Provide practical recommendations
 
 
-## Datasets
+# Datasets
 
-###  Synthetic Data
+#  Synthetic Data
 
 | Dataset            | Description               | Purpose           |
 | ------------------ | ------------------------- | ----------------- |
@@ -33,7 +33,7 @@ The study includes both **synthetic datasets** and a **real-world medical datase
 | Moons              | Interleaving half-circles | Non-linear        |
 | Circles            | Concentric classes        | Highly non-linear |
 
-### Real Data
+# Real Data
 
 * Breast Cancer Wisconsin Dataset
 * 569 samples, 30 features
@@ -50,19 +50,21 @@ from sklearn.preprocessing import StandardScaler
 * Model: `SVC` (Support Vector Classifier)
 * Train/Test Split:
 
-  * Synthetic: 70/30
-  * Real Data: 80/20
+   Synthetic: 70/30
+   Real Data: 80/20
+  
 * Preprocessing:
 
-  * StandardScaler (feature scaling)
+  StandardScaler (feature scaling)
+  
 * Validation:
 
-  * 5-fold cross-validation
+   5-fold cross-validation
 
 
-##  Results Summary
+#  Results Summary
 
-###  Synthetic Data Performance
+#  Synthetic Data Performance
 
 | Dataset | Linear | Polynomial | RBF      | Sigmoid |
 | ------- | ------ | ---------- | -------- | ------- |
@@ -73,7 +75,7 @@ from sklearn.preprocessing import StandardScaler
  **RBF consistently outperforms other kernels**
 
 
-### 🧬 Real Dataset (Breast Cancer)
+#  Real Dataset (Breast Cancer)
 
 | Kernel     | Test Accuracy |
 | ---------- | ------------- |
@@ -85,16 +87,16 @@ from sklearn.preprocessing import StandardScaler
  **RBF achieves the best overall performance**
 
 
-##  Feature Scaling Impact
+#  Feature Scaling Impact
 
 * Essential for SVM performance
 * Prevents large-scale features from dominating
 * Improves stability (especially for sigmoid kernel)
 
 
-##  Hyperparameter Tuning
+#  Hyperparameter Tuning
 
-### Key Parameters:
+# Key Parameters:
 
  **C (Regularization)**
 
@@ -106,20 +108,20 @@ from sklearn.preprocessing import StandardScaler
   * High → overfitting
   * Low → underfitting
 
-###  Recommended Starting Values:
+#  Recommended Starting Values:
 
 python
 C = 1
 gamma = 0.01  # to 0.1 range
 
 
-##  Learning Curve Insights
+#  Learning Curve Insights
 
 * Training accuracy remains high
 * Validation improves with more data
 * Small gap → good generalization
 
-##  Practical Recommendations
+# Practical Recommendations
 
 * Start with **RBF kernel**
 * Always apply **feature scaling**
@@ -128,7 +130,7 @@ gamma = 0.01  # to 0.1 range
 * Use **linear kernel** for high-dimensional data
 
 
-##  Limitations
+#  Limitations
 
 * Hard to interpret
 * Expensive for large datasets
@@ -136,14 +138,14 @@ gamma = 0.01  # to 0.1 range
 * Requires tuning
 
 
-##  Ethical Considerations
+#  Ethical Considerations
 
 * Limited interpretability in critical domains
 * Risk of bias from unrepresentative data
 * Use explainability tools (e.g., SHAP, LIME)
 
 
-##  Conclusion
+# Conclusion
 
 * **RBF is the most versatile kernel**
 * Feature scaling is essential
@@ -151,7 +153,7 @@ gamma = 0.01  # to 0.1 range
 * Best suited for **small–medium datasets**
 
 
-##  References
+# References
 
 * Géron, A. (2022) – *Hands-On Machine Learning*
 * Hsu et al. (2003) – *SVM Practical Guide*
